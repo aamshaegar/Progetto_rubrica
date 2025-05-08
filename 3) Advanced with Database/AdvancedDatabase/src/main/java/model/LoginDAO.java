@@ -57,7 +57,7 @@ public class LoginDAO {
                     return new Utente(id, user, pass);
                 }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Credenziali errate, oppure nessun Database.");
         }
         return null;
     }

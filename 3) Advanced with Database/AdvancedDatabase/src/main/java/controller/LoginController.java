@@ -34,7 +34,7 @@ public class LoginController {
                 ContactUserModel contactUserModel = new ContactUserModel(user);
                 new ViewController(rubricaView, contactUserModel);
             } else {
-                JOptionPane.showMessageDialog(loginView, "Credenziali errate", "Errore", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(loginView, "Credenziali errate!", "Errore", JOptionPane.ERROR_MESSAGE);
             }
         });
     }

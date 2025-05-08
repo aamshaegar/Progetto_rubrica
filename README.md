@@ -58,20 +58,22 @@ Il database MySQL è gestito attraverso container Docker. Un file "docker-compos
 Assicurarsi di avere installato "Docker" e "Docker compose" sulla propria macchina.
 
 ```
-docker compose up       // Per lanciare i container
-docker compose down     // Per rimuovere i container creati
+docker compose up         // Per lanciare i container
+docker compose down       // Per rimuovere i container creati
+docker compose down -v    // Per rimuovere i volumi allocati
 ```
 
 Tra i file di progetto presente un documento "config.properties" attraverso il quale è possibile configurare l'accesso al DB.
 Informazioni contenute:
 
 ```
-db.url=jdbc:mysql://localhost:3306/mydatabase
+db.url=jdbc:mysql://localhost:3306/database
 db.user=user
-db.password=userpassword
+db.password=password
 ```
 
 Queste informazioni devono essere congruenti con le variabili di ambiente dichiarate nel docker compose file.
+Assicurarsi di inizializzare correttamente il Database caricando con le informazioni presenti nel file "database.sql"
 
 # Directories
 

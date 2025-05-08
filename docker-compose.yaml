@@ -6,9 +6,9 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
+      MYSQL_DATABASE: database
       MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
+      MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
     volumes:
@@ -20,7 +20,7 @@ services:
     environment:
       PMA_HOST: mysql
       PMA_USER: user
-      PMA_PASSWORD: userpassword
+      PMA_PASSWORD: password
     ports:
       - "8080:80"
     depends_on:
